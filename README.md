@@ -34,16 +34,16 @@ Una aplicación web moderna para gestionar tu lista de contactos personales. Des
 
 ## Los pasos
 
-Paso 1 [Paso 1](./src/img/1.png)
+Paso 1 ![Paso 1](./src/img/1.png)
 
-Paso 2 [Paso 2](./src/img/2.png)
+Paso 2 ![Paso 2](./src/img/2.png)
 
-Paso 3 [Paso 3](./src/img/3.png)
+Paso 3 ![Paso 3](./src/img/3.png)
 
-Paso 4 [Paso 4](./src/img/4.png)
+Paso 4 ![Paso 4](./src/img/4.png)
 
-Paso 5 [Paso 5](./src/img/5.png)
+Paso 5 ![Paso 5](./src/img/5.png)
 
-Paso 6 [Paso 6](./src/img/6.png)
+Paso 6 ![Paso 6](./src/img/6.png)
 
-Paso 7 [Paso 7](./src/img/7.png)
+Paso 7 ![Paso 7](./src/img/7.png)
