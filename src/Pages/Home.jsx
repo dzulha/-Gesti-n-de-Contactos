@@ -35,7 +35,7 @@
             contacts
                 .filter((contact) => contact && contact.name) // 👈 Filtrar contactos válidos
                 .map((contact) => (
-                <ContactCard key={contact.uid} contact={contact} />
+                <ContactCard key={contact.id} contact={contact} />
                 ))
             )}
         </div>

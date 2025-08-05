@@ -21,7 +21,7 @@
         e.preventDefault();
 
         const contactData = {
-        full_name: form.full_name,
+        name: form.full_name,
         email: form.email,
         phone: form.phone,
         address: form.address,
