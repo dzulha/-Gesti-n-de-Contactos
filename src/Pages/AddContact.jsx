@@ -4,7 +4,7 @@
 
     function AddContact() {
     const navigate = useNavigate();
-    const { loadContacts } = useContext(ContactContext);
+    const { addContact } = useContext(ContactContext);
 
     const [form, setForm] = useState({
         full_name: "",
@@ -20,40 +20,20 @@
     const handleSubmit = async (e) => {
         e.preventDefault();
 
-        const url = "https://playground.4geeks.com/contact/agendas/dzulha/contacts";
-    const bodyData = {
-    name: form.full_name,
-    email: form.email,
-    phone: form.phone,
-    address: form.address,
-    agenda_slug: "dzulha",
-    };
-
-
-
-        console.log("🚀 Enviando POST a:", url);
-        console.log("🧾 Datos:", bodyData);
+        const contactData = {
+        full_name: form.full_name,
+        email: form.email,
+        phone: form.phone,
+        address: form.address,
+        agenda_slug: "dzulha",
+        };
 
         try {
-        const res = await fetch(url, {
-            method: "POST",
-            headers: { "Content-Type": "application/json" },
-            body: JSON.stringify(bodyData),
-        });
-
-        const data = await res.json();
-        console.log("📦 Respuesta del servidor:", data);
-
-        if (res.ok) {
-            await loadContacts();
-            navigate("/");
-        } else {
-            alert("Error al guardar el contacto:\n" + JSON.stringify(data, null, 2));
-
-        }
+        await addContact(contactData);
+        navigate("/");
         } catch (error) {
-        console.error("❌ Error de red:", error);
-        alert("No se pudo conectar con el servidor.");
+        console.error("❌ Error al agregar contacto:", error);
+        alert("Hubo un error al agregar el contacto.");
         }
     };
 
@@ -95,7 +75,7 @@
             required
             />
             <button className="btn btn-primary w-100 mb-2" type="submit">
-            save
+            Save
             </button>
         </form>
         <p className="text-center">
